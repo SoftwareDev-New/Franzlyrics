@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multo Lyrics | Franzlyrics</title>
+    <link rel="stylesheet" href="../../../css/lyrics-common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar-lyrics" aria-label="Main Navigation">
+            <a href="../../../html/home.html" class="nav-brand" aria-label="Franzlyrics Home">
+                <i class="fas fa-music"></i>
+                <span>Franzlyrics</span>
+            </a>
+            <div class="az-navbar" aria-label="A to Z Navigation">
+                <!-- <label for="azDropdown" class="az-dropdown-label" style="display:none;">Jump to letter:</label> -->
+                <select id="azDropdown" class="az-dropdown" style="display:none;">
+                    <option value="" disabled selected>Jump to letter</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W">W</option>
+                    <option value="X">X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+                </select>
+                <ul id="azNav">
+                    <li><a href="../../../html/az-list.html?letter=A" data-letter="A">A</a></li>
+                    <li><a href="../../../html/az-list.html?letter=B" data-letter="B">B</a></li>
+                    <li><a href="../../../html/az-list.html?letter=C" data-letter="C">C</a></li>
+                    <li><a href="../../../html/az-list.html?letter=D" data-letter="D">D</a></li>
+                    <li><a href="../../../html/az-list.html?letter=E" data-letter="E">E</a></li>
+                    <li><a href="../../../html/az-list.html?letter=F" data-letter="F">F</a></li>
+                    <li><a href="../../../html/az-list.html?letter=G" data-letter="G">G</a></li>
+                    <li><a href="../../../html/az-list.html?letter=H" data-letter="H">H</a></li>
+                    <li><a href="../../../html/az-list.html?letter=I" data-letter="I">I</a></li>
+                    <li><a href="../../../html/az-list.html?letter=J" data-letter="J">J</a></li>
+                    <li><a href="../../../html/az-list.html?letter=K" data-letter="K">K</a></li>
+                    <li><a href="../../../html/az-list.html?letter=L" data-letter="L">L</a></li>
+                    <li><a href="../../../html/az-list.html?letter=M" data-letter="M">M</a></li>
+                    <li><a href="../../../html/az-list.html?letter=N" data-letter="N">N</a></li>
+                    <li><a href="../../../html/az-list.html?letter=O" data-letter="O">O</a></li>
+                    <li><a href="../../../html/az-list.html?letter=P" data-letter="P">P</a></li>
+                    <li><a href="../../../html/az-list.html?letter=Q" data-letter="Q">Q</a></li>
+                    <li><a href="../../../html/az-list.html?letter=R" data-letter="R">R</a></li>
+                    <li><a href="../../../html/az-list.html?letter=S" data-letter="S">S</a></li>
+                    <li><a href="../../../html/az-list.html?letter=T" data-letter="T">T</a></li>
+                    <li><a href="../../../html/az-list.html?letter=U" data-letter="U">U</a></li>
+                    <li><a href="../../../html/az-list.html?letter=V" data-letter="V">V</a></li>
+                    <li><a href="../../../html/az-list.html?letter=W" data-letter="W">W</a></li>
+                    <li><a href="../../../html/az-list.html?letter=X" data-letter="X">X</a></li>
+                    <li><a href="../../../html/az-list.html?letter=Y" data-letter="Y">Y</a></li>
+                    <li><a href="../../../html/az-list.html?letter=Z" data-letter="Z">Z</a></li>
+                </ul>
+            </div>
+            <form class="search-container" role="search" aria-label="Song search">
+                <input type="text" id="searchInput" placeholder="Search for songs, artists..." aria-label="Search for songs, artists">
+                <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+            </form>
+        </nav>
+    </header>
+    <section id="az-results-section" class="az-results-section" style="display:none;">
+            <h2 id="az-results-title"></h2>
+            <ul id="azResultsList"></ul>
+        </section>
+    <main class="main-content">
+        <div class="lyrics-container">
+            <div class="song-header">
+                <div class="song-info">
+                    <h1>Multo</h1>
+                    <h2>Artist Name</h2>
+                    <div class="action-buttons">
+                        <button class="btn" id="copyLyrics"><i class="fas fa-copy"></i></button>
+                        <button class="btn share-btn"><i class="fas fa-share-alt"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="lyrics-content" id="lyricsText">
+                <div class="verse">
+                    <p>Humingang malalim<br>Pumikit na muna<br>At baka sakaling<br>Namamalikmata lang<br>Ba't nababahala?<br>'Di ba't ako'y mag-isa?<br>Kala ko'y payapa<br>Boses mo'y tumatawag pa<br><br><br>Binaon naman na ang lahat<br>Tinakpan naman na aking sugat<br>Ngunit ba't ba andito pa rin?<br>Hirap na 'kong intindihin<br><br><br>Tanging panalangin<br>Lubayan na sana<br>Dahil sa bawat tingin<br>Mukha mo'y nakikita<br>Kahit sa'n man mapunta ay<br>Anino mo'y kumakapit sa aking kamay<br>Ako ay dahan-dahang<br>Nililibing nang buhay pa<br><br><br>Hindi na makalaya<br>Dinadalaw mo 'ko bawat gabi<br>Wala mang nakikita<br>Haplos mo'y ramdam pa rin sa dilim<br>Hindi na nananaginip<br>Hindi na ma-makagising<br>Pasindi na ng ilaw<br>Minumulto na 'ko ng damdamin ko<br>Ng damdamin ko<br><br><br>Hindi mo ba ako lilisanin?<br>Hindi pa ba sapat pagpapahirap sa 'kin?<br>Hindi na ba ma-mamayapa?<br>'Di na ba ma-mamayapa?<br><br><br>Hindi na makalaya<br>Dinadalaw mo 'ko bawat gabi<br>Wala mang nakikita<br>Haplos mo'y ramdam pa rin sa dilim<br>Hindi na nananaginip<br>Hindi na ma-makagising<br>Pasindi na ng ilaw<br>Minumulto na 'ko ng damdamin ko<br>Ng damdamin ko<br><br><br>Hindi mo ba ako lilisanin?<br>(Makalaya)<br>Hindi pa ba sapat pagpapahirap sa 'kin?<br>(Dinadalaw mo 'ko bawat gabi)<br>Hindi na ba ma-mamayapa?<br>(Wala mang nakikita)<br>Hindi na ba ma-mamayapa?<br>(Haplos mo'y ramdam pa rin sa dilim)</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            <a href="../../../html/privacy.html">Privacy Policy</a> • 
+            <a href="../../../html/contact.html">Contact</a> • 
+            <a href="https://www.tiktok.com/@franzlyrics0.1" target="_blank">
+            <i class="fab fa-tiktok"></i> TikTok</a>
+            <a href="https://open.spotify.com/playlist/27TUamDr7Z3FqZlY08MCqK?si=d23540ef251943ab" target="_blank" rel="noopener">
+            <i class="fab fa-spotify"></i> Spotify</a>
+        </p>
+        <p>&copy; 2025 FranzLyrics. All rights reserved.</p>
+    </footer>
+    <script src="../../../js/lyrics-common.js"></script>
+    <script src="../../../js/az-navbar.js"></script>
+</body>
+</html>

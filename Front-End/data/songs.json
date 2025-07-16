@@ -1,0 +1,18 @@
+{
+  "songs": [
+    {"title": "Banta", "artist": "Butch Charvet", "path": "/Front-End/lyrics/B/Banta/output.html"},
+    {"title": "Glorious", "artist": "BJ Putnam", "path": "/Front-End/lyrics/G/Glorious/output.html"},
+    {"title": "Turn It Up", "artist": "PlanetShakers", "path": "/Front-End/lyrics/T/Turn_It_Up/output.html"},
+    {"title": "Goodness of God", "artist": "Jenn Johnson, Bethel Music", "path": "/Front-End/lyrics/G/Goodness_of_God/output.html"},
+    {"title": "Masayang Maglingkod", "artist": "Final Hour Music Artist, Goodman Music", "path": "/Front-End/lyrics/M/Masayang_Maglingkod/output.html"},
+    {"title": "God Is Good All the Time", "artist": "Don Moen, Integrity's Hosanna! Music", "path": "/Front-End/lyrics/G/God_Is_Good_All_the_Time/output.html"},
+    {"title": "Praise (feat. Brandon Lake, Chris Brown & Chandler Moore)", "artist": "Elevation Worship", "path": "/Front-End/lyrics/P/Praise__feat__Brandon_Lake__Chris_Brown___Chandler_Moore_/output.html"},
+    {"title": "Dance", "artist": "Planetshakers", "path": "/Front-End/lyrics/D/Dance/output.html"},
+    {"title": "Multo", "artist": "Cup Of Joe", "path": "/Front-End/lyrics/M/Multo/output.html"},
+    {"title": "Dandelions", "artist": "Ruth B.", "path": "/Front-End/lyrics/D/Dandelions/output.html"},
+    {"title": "Holy Spirit (feat. Kim Walker-Smith)", "artist": "Jesus Culture", "path": "/Front-End/lyrics/H/Holy_Spirit__feat__Kim_Walker_Smith_/output.html"},
+    {"title": "Nothing Is Impossible", "artist": "Planetshakers", "path": "/Front-End/lyrics/N/Nothing_Is_Impossible/output.html"},
+    {"title": "Endless Praise", "artist": "PlanetShakers", "path": "/Front-End/lyrics/E/Endless_Praise/output.html"},
+    {"title": "Hero", "artist": "Cash Cash ft. Christina Perri", "path": "/Front-End/lyrics/C/Cash Cash/output.html"}
+  ]
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Song | Franzlyrics</title>
+    <link rel="stylesheet" href="../css/share.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <main>
+        <div class="form-container">
+            <div class="center-text margin-bottom-2">
+                <h1>Share Your Song</h1>
+                <p>Fill in the details below to share your favorite song with us</p>
+            </div>
+            
+            <form id="songForm" class="space-y-1-5">
+                <div class="grid grid-one-col grid-two-col-md gap-1-5">
+                    <div>
+                        <label for="Title">Song Title *</label>
+                        <input type="text" id="Title" name="Title" required>
+                    </div>
+                    <div>
+                        <label for="Artist">Artist *</label>
+                        <input type="text" id="Artist" name="Artist" required>
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="Lyrics">Lyrics *</label>
+                    <textarea id="Lyrics" name="Lyrics" required></textarea>
+                </div>
+                
+                <div class="pt-2">
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-upload"></i> Send Song
+                    </button>
+                </div>
+            </form>
+            
+            <div id="successMessage" class="success-message hidden margin-top-1-5">
+                <div class="flex align-center justify-center">
+                    <i class="fas fa-check-circle margin-right-0-5"></i>
+                    <span>Thank you! Your song has been submitted. We'll review it within 2 business days.</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            <a href="../html/privacy.html">Privacy Policy</a> • 
+            <a href="../html/contact.html">Contact</a> • 
+            <a href="https://www.tiktok.com/@franzlyrics0.1" target="_blank" rel="noopener">
+            <i class="fab fa-tiktok"></i> TikTok</a> • 
+            <a href="https://open.spotify.com/playlist/27TUamDr7Z3FqZlY08MCqK?si=d23540ef251943ab" target="_blank" rel="noopener">
+            <i class="fab fa-spotify"></i> Spotify</a>
+        </p>
+        <p>© 2025 FranzLyrics. All rights reserved.</p>
+    </footer>
+    <div id="results"></div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("_X9-KGk7Yk5VvTWXD"); // Replace with your EmailJS user ID
+        })();
+
+        document.getElementById('songForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const successMsg = document.getElementById('successMessage');
+            
+            // Disable submit button while processing
+            submitBtn.disabled = true;
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+            const songData = {
+                Title: document.getElementById('Title').value.trim(),
+                Artist: document.getElementById('Artist').value.trim(),
+                Lyrics: document.getElementById('Lyrics').value.trim()
+            };
+
+            // Check if all required fields are filled
+            if (!songData.Title || !songData.Artist || !songData.Lyrics) {
+                alert('Please fill in all required fields');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+                return;
+            }
+            
+            emailjs.send("service_yca3xrk", "template_45wcvah", songData)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    successMsg.classList.remove('hidden');
+                    form.reset();
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+                    setTimeout(() => {
+                        successMsg.scrollIntoView({ behavior: 'smooth' });
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                    }, 2000);
+                })
+                .catch(function(error) {
+                    console.error('FAILED...', error);
+                    alert('Sorry, there was an error sending your song. Please try again.');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                });
+        });
+    </script>
+</body>
+</html>

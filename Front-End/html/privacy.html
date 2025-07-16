@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Franzlyrics</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/privacy.css">
+    <link rel="stylesheet" href="../css/lyrics-common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar-lyrics" aria-label="Main Navigation">
+            <a href="home.html" class="nav-brand" aria-label="Franzlyrics Home">
+                <i class="fas fa-music"></i>
+                <span>Franzlyrics</span>
+            </a>
+            <div class="az-navbar" aria-label="A to Z Navigation">
+                <!-- <label for="azDropdown" class="az-dropdown-label" style="display:none;">Jump to letter:</label> -->
+                <select id="azDropdown" class="az-dropdown" style="display:none;">
+                    <option value="" disabled selected>Jump to letter</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W">W</option>
+                    <option value="X">X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+                </select>
+                <ul id="azNav">
+                    <li><a href="az-list.html?letter=A" data-letter="A">A</a></li>
+                    <li><a href="az-list.html?letter=B" data-letter="B">B</a></li>
+                    <li><a href="az-list.html?letter=C" data-letter="C">C</a></li>
+                    <li><a href="az-list.html?letter=D" data-letter="D">D</a></li>
+                    <li><a href="az-list.html?letter=E" data-letter="E">E</a></li>
+                    <li><a href="az-list.html?letter=F" data-letter="F">F</a></li>
+                    <li><a href="az-list.html?letter=G" data-letter="G">G</a></li>
+                    <li><a href="az-list.html?letter=H" data-letter="H">H</a></li>
+                    <li><a href="az-list.html?letter=I" data-letter="I">I</a></li>
+                    <li><a href="az-list.html?letter=J" data-letter="J">J</a></li>
+                    <li><a href="az-list.html?letter=K" data-letter="K">K</a></li>
+                    <li><a href="az-list.html?letter=L" data-letter="L">L</a></li>
+                    <li><a href="az-list.html?letter=M" data-letter="M">M</a></li>
+                    <li><a href="az-list.html?letter=N" data-letter="N">N</a></li>
+                    <li><a href="az-list.html?letter=O" data-letter="O">O</a></li>
+                    <li><a href="az-list.html?letter=P" data-letter="P">P</a></li>
+                    <li><a href="az-list.html?letter=Q" data-letter="Q">Q</a></li>
+                    <li><a href="az-list.html?letter=R" data-letter="R">R</a></li>
+                    <li><a href="az-list.html?letter=S" data-letter="S">S</a></li>
+                    <li><a href="az-list.html?letter=T" data-letter="T">T</a></li>
+                    <li><a href="az-list.html?letter=U" data-letter="U">U</a></li>
+                    <li><a href="az-list.html?letter=V" data-letter="V">V</a></li>
+                    <li><a href="az-list.html?letter=W" data-letter="W">W</a></li>
+                    <li><a href="az-list.html?letter=X" data-letter="X">X</a></li>
+                    <li><a href="az-list.html?letter=Y" data-letter="Y">Y</a></li>
+                    <li><a href="az-list.html?letter=Z" data-letter="Z">Z</a></li>
+                </ul>
+            </div>
+            <form class="search-container" role="search" aria-label="Song search">
+                <input type="text" id="searchInput" placeholder="Search for songs, artists..." aria-label="Search for songs, artists">
+                <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+            </form>
+        </nav>
+    </header>
+    
+    <section id="az-results-section" style="display: none;">
+        <h2 id="az-results-title"></h2>
+        <ul id="azResultsList"></ul>
+    </section>
+    <main>
+        <div class="page-container">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: <span id="current-date"></span></p>
+            
+            <div class="notice-box">
+                <p><strong>Notice:</strong> This Privacy Policy outlines how Franzlyrics collects, uses, and protects your information when you interact with our website and services. By accessing or using our platform, you acknowledge and agree to the practices described in this policy.</p>
+            </div>
+            
+            <section>
+                <h2>1. Information We Collect</h2>
+                <p>Franzlyrics is designed to minimize data collection. We do not require users to create accounts or log in to access our services. However, we may collect the following types of information:</p>
+                <ul>
+                    <li><strong>Non-Personal Information:</strong> We may collect anonymized data, such as browser type, operating system, IP address, and website usage patterns, through analytics tools to understand how our website is used.</li>
+                    <li><strong>Voluntarily Provided Information:</strong> If you contact us via email or through our contact form, we may receive information such as your name, email address, or other details you choose to provide.</li>
+                    <li><strong>Cookies and Tracking Technologies:</strong> Our website may use cookies to enhance user experience, such as remembering your preferences or analyzing site traffic. You can manage cookie preferences through your browser settings.</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>2. Use of Information</h2>
+                <p>We use the limited information we collect to:</p>
+                <ul>
+                    <li>Improve our website’s functionality and user experience.</li>
+                    <li>Respond to inquiries or feedback submitted through our contact form or email.</li>
+                    <li>Analyze anonymized usage data to understand trends and optimize our services.</li>
+                </ul>
+                <p>We do not collect personal information for marketing purposes or share it with third parties for commercial use.</p>
+            </section>
+            
+            <section>
+                <h2>3. Data Sharing</h2>
+                <p>We do not sell, trade, or share personal information with third parties, except in the following limited circumstances:</p>
+                <ul>
+                    <li><strong>Service Providers:</strong> We may use third-party services (e.g., analytics or hosting providers) that process anonymized data on our behalf. These providers are bound by strict confidentiality agreements.</li>
+                    <li><strong>Legal Requirements:</strong> We may disclose information if required by law, such as in response to a court order or legal process.</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>4. Cookies and Tracking Technologies</h2>
+                <p>Our website may use cookies to enhance your experience. Cookies are small text files stored on your device that help us:</p>
+                <ul>
+                    <li>Understand how users navigate our website.</li>
+                    <li>Remember your preferences for future visits.</li>
+                    <li>Improve site performance and content delivery.</li>
+                </ul>
+                <p>You can disable cookies through your browser settings, but this may affect the functionality of our website.</p>
+            </section>
+            
+            <section>
+                <h2>5. Data Security</h2>
+                <p>We implement industry-standard security measures to protect our website from unauthorized access, including secure hosting and encryption protocols where applicable. However, as we do not store personal user data, the risk Ascertain risk of data breach is minimal.</p>
+            </section>
+            
+            <section>
+                <h2>6. Your Rights</h2>
+                <p>Since we collect minimal personal data, your rights regarding data access are limited. However, if you have provided personal information (e.g., through contact forms), you may:</p>
+                <ul>
+                    <li>Request access to any personal data we hold about you.</li>
+                    <li>Request correction or deletion of your personal data.</li>
+                    <li>Opt out of cookies or tracking technologies via your browser settings.</li>
+                </ul>
+                <p>To exercise these rights, please contact us using the details provided below.</p>
+            </section>
+            
+            <section>
+                <h2>7. Children's Privacy</h2>
+                <p>Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children. If we become aware that a child under 13 has provided personal information, we will take steps to delete such information.</p>
+            </section>
+            
+            <section>
+                <h2>8. Third-Party Links</h2>
+                <p>Our website may contain links to external platforms (e.g., Facebook, TikTok). These third-party sites have their own privacy policies, and we are not responsible for their practices. We encourage you to review their policies before engaging with these platforms.</p>
+            </section>
+            
+            <section>
+                <h2>9. International Data Transfers</h2>
+                <p>As Franzlyrics operates globally, any information you provide may be transferred to or stored in countries outside your region. We ensure that any such transfers comply with applicable data protection laws and are protected by appropriate safeguards.</p>
+            </section>
+            
+            <section>
+                <h2>10. Policy Changes</h2>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify users of significant changes by posting a notice on our website or through other appropriate channels.</p>
+            </section>
+            
+            <section>
+                <h2>11. Contact Us</h2>
+                <p>For any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact:</p>
+                <p>
+                    <strong>Franzlyrics Privacy Team</strong><br>
+                    Email: softwaretechweb@gmail.com<br>
+                    Facebook: <a href="https://www.facebook.com/francis.john.d.gordon">https://www.facebook.com</a><br>
+                    TikTok: <a href="https://www.tiktok.com/@franzlyrics0.1?lang=en">https://www.tiktok.com</a>
+                </p>
+            </section>
+        </div>
+    </main>
+    <section class="share-song-section">
+        <a class="btn btn-primary share-song-btn" href="../html/share.html">
+            <i class="fas fa-share-alt"></i> Share Your Song</a>
+    </section>
+    <footer>
+        <p>
+            <a href="privacy.html">Privacy Policy</a> • 
+            <a href="contact.html">Contact</a> • 
+            <a href="https://www.tiktok.com/@franzlyrics0.1" target="_blank" rel="noopener">
+            <i class="fab fa-tiktok"></i> TikTok</a> • 
+            <a href="https://open.spotify.com/playlist/27TUamDr7Z3FqZlY08MCqK?si=d23540ef251943ab" target="_blank" rel="noopener">
+            <i class="fab fa-spotify"></i> Spotify</a>
+        </p>
+        <p style="color: #fff;">© 2025 FranzLyrics. All rights reserved.</p>
+    </footer>
+    
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lyrics-common.js"></script>
+    <script src="../js/az-navbar.js"></script>
+    <script>
+        // Set current date automatically
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
+</body>
+</html>

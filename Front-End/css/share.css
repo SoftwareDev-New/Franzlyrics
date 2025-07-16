@@ -1,0 +1,175 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f5;
+            color: #2d2d2d;
+            line-height: 1.5;
+        }
+
+        main {
+            min-height: calc(100vh - 140px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1.5rem;
+        }
+
+        .form-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            margin: 0 auto;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d2d2d;
+            margin-bottom: 2.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2d2d2d;
+            margin-bottom: 0.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #2d2d2d;
+            background-color: #fafafa;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #e67e22;
+            box-shadow: 0 0 0 4px rgba(230, 126, 34, 0.15);
+        }
+
+        textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        .error-message {
+            display: none;
+            color: #dc2626;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+
+        .submit-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.875rem 2rem;
+            background-color: #e67e22;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #cc6d1d;
+            transform: translateY(-2px);
+        }
+
+        .submit-button:disabled {
+            background-color: #a3a3a3;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .success-message {
+            display: none;
+            background-color: #fff7ed;
+            color: #7c2d12;
+            padding: 1.25rem;
+            border-radius: 10px;
+            border: 1px solid #fed7aa;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .success-message i {
+            color: #16a34a;
+            font-size: 1.25rem;
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem; /* Reduced padding for a smaller footer */
+            background-color: #2c3e50;
+            color: #e0e0e0;
+            font-size: 0.85rem; /* Slightly smaller font size for balance */
+        }
+
+        footer a {
+            color: #e67e22; /* Matching the accent color from the form */
+            text-decoration: none;
+            margin: 0 0.5rem; /* Reduced margin for tighter spacing */
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #cc6d1d; /* Matching hover color from the form */
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .form-container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .submit-button {
+                padding: 0.75rem 1.5rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            footer {
+                padding: 1rem; /* Further reduced padding for mobile */
+                font-size: 0.8rem; /* Smaller font size for mobile */
+            }
+
+            footer a {
+                margin: 0 0.3rem; /* Adjusted margin for mobile */
+            }
+        }
